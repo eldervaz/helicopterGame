@@ -1,0 +1,295 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		899EC9051D2ACCBE00867BC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899EC9041D2ACCBE00867BC0 /* AppDelegate.swift */; };
+		899EC9071D2ACCBE00867BC0 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 899EC9061D2ACCBE00867BC0 /* GameScene.sks */; };
+		899EC9091D2ACCBE00867BC0 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899EC9081D2ACCBE00867BC0 /* GameScene.swift */; };
+		899EC90B1D2ACCBE00867BC0 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 899EC90A1D2ACCBE00867BC0 /* GameViewController.swift */; };
+		899EC90D1D2ACCBE00867BC0 /* Game.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899EC90C1D2ACCBE00867BC0 /* Game.xcassets */; };
+		899EC9101D2ACCBE00867BC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 899EC90E1D2ACCBE00867BC0 /* Main.storyboard */; };
+		899EC9121D2ACCBE00867BC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 899EC9111D2ACCBE00867BC0 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		899EC9011D2ACCBE00867BC0 /* TankTV.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TankTV.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		899EC9041D2ACCBE00867BC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		899EC9061D2ACCBE00867BC0 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		899EC9081D2ACCBE00867BC0 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		899EC90A1D2ACCBE00867BC0 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		899EC90C1D2ACCBE00867BC0 /* Game.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Game.xcassets; sourceTree = "<group>"; };
+		899EC90F1D2ACCBE00867BC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		899EC9111D2ACCBE00867BC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		899EC9131D2ACCBE00867BC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		899EC8FE1D2ACCBE00867BC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		899EC8F81D2ACCBE00867BC0 = {
+			isa = PBXGroup;
+			children = (
+				899EC9031D2ACCBE00867BC0 /* TankTV */,
+				899EC9021D2ACCBE00867BC0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		899EC9021D2ACCBE00867BC0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				899EC9011D2ACCBE00867BC0 /* TankTV.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		899EC9031D2ACCBE00867BC0 /* TankTV */ = {
+			isa = PBXGroup;
+			children = (
+				899EC9041D2ACCBE00867BC0 /* AppDelegate.swift */,
+				899EC9061D2ACCBE00867BC0 /* GameScene.sks */,
+				899EC9081D2ACCBE00867BC0 /* GameScene.swift */,
+				899EC90A1D2ACCBE00867BC0 /* GameViewController.swift */,
+				899EC90C1D2ACCBE00867BC0 /* Game.xcassets */,
+				899EC90E1D2ACCBE00867BC0 /* Main.storyboard */,
+				899EC9111D2ACCBE00867BC0 /* Assets.xcassets */,
+				899EC9131D2ACCBE00867BC0 /* Info.plist */,
+			);
+			path = TankTV;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		899EC9001D2ACCBE00867BC0 /* TankTV */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 899EC9161D2ACCBE00867BC0 /* Build configuration list for PBXNativeTarget "TankTV" */;
+			buildPhases = (
+				899EC8FD1D2ACCBE00867BC0 /* Sources */,
+				899EC8FE1D2ACCBE00867BC0 /* Frameworks */,
+				899EC8FF1D2ACCBE00867BC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TankTV;
+			productName = TankTV;
+			productReference = 899EC9011D2ACCBE00867BC0 /* TankTV.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		899EC8F91D2ACCBE00867BC0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = eldervaz;
+				TargetAttributes = {
+					899EC9001D2ACCBE00867BC0 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 899EC8FC1D2ACCBE00867BC0 /* Build configuration list for PBXProject "TankTV" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 899EC8F81D2ACCBE00867BC0;
+			productRefGroup = 899EC9021D2ACCBE00867BC0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				899EC9001D2ACCBE00867BC0 /* TankTV */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		899EC8FF1D2ACCBE00867BC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				899EC9101D2ACCBE00867BC0 /* Main.storyboard in Resources */,
+				899EC9071D2ACCBE00867BC0 /* GameScene.sks in Resources */,
+				899EC9121D2ACCBE00867BC0 /* Assets.xcassets in Resources */,
+				899EC90D1D2ACCBE00867BC0 /* Game.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		899EC8FD1D2ACCBE00867BC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				899EC9091D2ACCBE00867BC0 /* GameScene.swift in Sources */,
+				899EC90B1D2ACCBE00867BC0 /* GameViewController.swift in Sources */,
+				899EC9051D2ACCBE00867BC0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		899EC90E1D2ACCBE00867BC0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				899EC90F1D2ACCBE00867BC0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		899EC9141D2ACCBE00867BC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = appletvos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		899EC9151D2ACCBE00867BC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = appletvos;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		899EC9171D2ACCBE00867BC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = TankTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.area51.TankTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		899EC9181D2ACCBE00867BC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = TankTV/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.area51.TankTV;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		899EC8FC1D2ACCBE00867BC0 /* Build configuration list for PBXProject "TankTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				899EC9141D2ACCBE00867BC0 /* Debug */,
+				899EC9151D2ACCBE00867BC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		899EC9161D2ACCBE00867BC0 /* Build configuration list for PBXNativeTarget "TankTV" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				899EC9171D2ACCBE00867BC0 /* Debug */,
+				899EC9181D2ACCBE00867BC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 899EC8F91D2ACCBE00867BC0 /* Project object */;
+}
