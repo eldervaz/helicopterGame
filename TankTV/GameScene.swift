@@ -176,20 +176,21 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         let contorno = SKSpriteNode()
         addChild(contorno)
         
+        let swiftColor = UIColor(red: 1, green: 165/255, blue: 0, alpha: 0)
         
-        let block1 = SKSpriteNode(color: UIColor.red, size: CGSize(width: self.frame.size.width, height: 2000) )
+        let block1 = SKSpriteNode(color: swiftColor , size: CGSize(width: self.frame.size.width, height: 2000) )
         block1.position = CGPoint(x: size.width/2, y:  size.height + 700)
         contorno.addChild(block1)
         
-        let block2 = SKSpriteNode(color: UIColor.red, size: CGSize(width: self.frame.size.width, height: 2000) )
+        let block2 = SKSpriteNode(color: swiftColor, size: CGSize(width: self.frame.size.width, height: 2000) )
         block2.position = CGPoint(x: size.width/2, y:  -750)
         contorno.addChild(block2)
         
-        let block3 = SKSpriteNode(color: UIColor.red, size: CGSize(width: 2000, height: self.frame.size.height) )
+        let block3 = SKSpriteNode(color: swiftColor, size: CGSize(width: 2000, height: self.frame.size.height) )
         block3.position = CGPoint(x: -950, y: size.height/2 - 100 )
         contorno.addChild(block3)
         
-        let block4 = SKSpriteNode(color: UIColor.red, size: CGSize(width: 2000, height: self.frame.size.height) )
+        let block4 = SKSpriteNode(color: swiftColor, size: CGSize(width: 2000, height: self.frame.size.height) )
         block4.position = CGPoint(x: size.width + 950, y: size.height/2 - 100 )
         contorno.addChild(block4)
         //
