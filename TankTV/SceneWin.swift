@@ -21,19 +21,19 @@ class SceneWin: SKScene {
         fatalError("Error al implementar el init")
     }
     
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         
         let bg:SKSpriteNode = SKSpriteNode(imageNamed: "win")
         bg.position = CGPoint(x: self.size.width/2, y: self.size.height/2)
         self.addChild( bg )
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         let gameScene = GameScene(size: size)
         gameScene.scaleMode = scaleMode
         
-        let showGame = SKTransition.doorsOpenVerticalWithDuration(1)
+        let showGame = SKTransition.doorsOpenVertical(withDuration: 1)
         
         view?.presentScene(gameScene, transition:  showGame)
         

@@ -28,11 +28,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     let scoreLabel = SKLabelNode(fontNamed: "Snake Jacket")
     var score:Int = 0
     
-    var lastUpdateTime:NSTimeInterval? = 0.0
+    var lastUpdateTime:TimeInterval? = 0.0
     var stopMove:Bool! = false
     
     
-    override func didMoveToView(view: SKView) {
+    override func didMove(to view: SKView) {
         
         initBG()
         initPlayer()
@@ -44,10 +44,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         initFont()
         
         //repeatActionForever
-        runAction(SKAction.repeatAction(
+        run(SKAction.repeat(
             SKAction.sequence([
-                    SKAction.runBlock(initPeople),
-                    SKAction.waitForDuration(0.50)
+                    SKAction.run(initPeople),
+                    SKAction.wait(forDuration: 0.50)
                 ]), count: 10
             )
         )
@@ -55,20 +55,20 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         
         for touch in touches{
             
-            touchPositionX = touch.locationInNode(self).x
-            touchPositionY = touch.locationInNode(self).y
+            touchPositionX = touch.location(in: self).x
+            touchPositionY = touch.location(in: self).y
             
         }
         
     }
     
     
-    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         
         
         
@@ -76,7 +76,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         for touch in touches{
             
-            let location = touch.locationInNode(self)
+            let location = touch.location(in: self)
             
             if touchPositionX != 0.0 && touchPositionY != 0.0 {
                 
@@ -119,7 +119,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     }
     
-    override func update(currentTime: CFTimeInterval) {
+    override func update(_ currentTime: TimeInterval) {
         scoreLabel.text = "SCORE: \(score)"
         
         //_  = currentTime - lastUpdateTime!
@@ -133,14 +133,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     func initFont(){
         
         
-        scoreLabel.fontColor = SKColor.whiteColor()
+        scoreLabel.fontColor = SKColor.white
         scoreLabel.fontSize = 50
         scoreLabel.zPosition = 100
         
         scoreLabel.text = "SCORE: \(score)"
         addChild(scoreLabel)
         
-        scoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.Left
+        scoreLabel.horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.left
         scoreLabel.position = CGPoint(x: 100, y: size.height - 300)
         
         
@@ -150,7 +150,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
         physicsWorld.contactDelegate = self
         
-        helicopter.physicsBody = SKPhysicsBody(rectangleOfSize: helicopter.size)
+        helicopter.physicsBody = SKPhysicsBody(rectangleOf: helicopter.size)
         helicopter.physicsBody?.allowsRotation = false
         helicopter.physicsBody?.affectedByGravity = false
         
@@ -158,7 +158,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         helicopter.physicsBody?.contactTestBitMask = PeopleCategory | BaseCategory | BlockCategory
         
         
-        base.physicsBody = SKPhysicsBody(rectangleOfSize: base.size)
+        base.physicsBody = SKPhysicsBody(rectangleOf: base.size)
         base.physicsBody?.allowsRotation = false
         base.physicsBody?.affectedByGravity = false
         
@@ -177,19 +177,19 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild(contorno)
         
         
-        let block1 = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width: self.frame.size.width, height: 2000) )
+        let block1 = SKSpriteNode(color: UIColor.red, size: CGSize(width: self.frame.size.width, height: 2000) )
         block1.position = CGPoint(x: size.width/2, y:  size.height + 700)
         contorno.addChild(block1)
         
-        let block2 = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width: self.frame.size.width, height: 2000) )
+        let block2 = SKSpriteNode(color: UIColor.red, size: CGSize(width: self.frame.size.width, height: 2000) )
         block2.position = CGPoint(x: size.width/2, y:  -750)
         contorno.addChild(block2)
         
-        let block3 = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width: 2000, height: self.frame.size.height) )
+        let block3 = SKSpriteNode(color: UIColor.red, size: CGSize(width: 2000, height: self.frame.size.height) )
         block3.position = CGPoint(x: -950, y: size.height/2 - 100 )
         contorno.addChild(block3)
         
-        let block4 = SKSpriteNode(color: UIColor.redColor(), size: CGSize(width: 2000, height: self.frame.size.height) )
+        let block4 = SKSpriteNode(color: UIColor.red, size: CGSize(width: 2000, height: self.frame.size.height) )
         block4.position = CGPoint(x: size.width + 950, y: size.height/2 - 100 )
         contorno.addChild(block4)
         //
@@ -199,7 +199,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         block4.name = "block"
         
         //
-        block1.physicsBody = SKPhysicsBody(rectangleOfSize: block1.size)
+        block1.physicsBody = SKPhysicsBody(rectangleOf: block1.size)
         block1.physicsBody?.allowsRotation = false
         block1.physicsBody?.affectedByGravity = false
         
@@ -207,7 +207,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         block1.physicsBody?.contactTestBitMask = PlayerCategory
         block1.physicsBody?.collisionBitMask = 0
         //
-        block2.physicsBody = SKPhysicsBody(rectangleOfSize: block2.size)
+        block2.physicsBody = SKPhysicsBody(rectangleOf: block2.size)
         block2.physicsBody?.allowsRotation = false
         block2.physicsBody?.affectedByGravity = false
         
@@ -215,7 +215,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         block2.physicsBody?.contactTestBitMask = PlayerCategory
         block2.physicsBody?.collisionBitMask = 0
         //
-        block3.physicsBody = SKPhysicsBody(rectangleOfSize: block3.size)
+        block3.physicsBody = SKPhysicsBody(rectangleOf: block3.size)
         block3.physicsBody?.allowsRotation = false
         block3.physicsBody?.affectedByGravity = false
         
@@ -223,7 +223,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         block3.physicsBody?.contactTestBitMask = PlayerCategory
         block3.physicsBody?.collisionBitMask = 0
         //
-        block4.physicsBody = SKPhysicsBody(rectangleOfSize: block4.size)
+        block4.physicsBody = SKPhysicsBody(rectangleOf: block4.size)
         block4.physicsBody?.allowsRotation = false
         block4.physicsBody?.affectedByGravity = false
         
@@ -232,7 +232,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         block4.physicsBody?.collisionBitMask = 0
     }
     
-    func didBeginContact(contact: SKPhysicsContact) {
+    func didBegin(_ contact: SKPhysicsContact) {
         
         
         var firstBody:SKPhysicsBody
@@ -256,7 +256,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             if score >= 10 {
                 let gameWin = SceneWin(size: size)
                 gameWin.scaleMode = scaleMode
-                let showScene = SKTransition.doorsOpenHorizontalWithDuration(1.5)
+                let showScene = SKTransition.doorsOpenHorizontal(withDuration: 1.5)
                 view?.presentScene(gameWin, transition: showScene)
             }
         }
@@ -275,7 +275,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
     }
     
-    func random(min min: CGFloat, max: CGFloat) -> CGFloat {
+    func random(min: CGFloat, max: CGFloat) -> CGFloat {
         return random() * (max - min) + min
     }
     
@@ -294,7 +294,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         addChild( person )
         
         
-        person.physicsBody = SKPhysicsBody(rectangleOfSize: person.size)
+        person.physicsBody = SKPhysicsBody(rectangleOf: person.size)
         person.physicsBody?.allowsRotation = false
         person.physicsBody?.affectedByGravity = false
         
@@ -322,11 +322,11 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         for i in 0...11 {
             textures.append( SKTexture(imageNamed: "\(i)") )
         }
-        let anima = SKAction.animateWithTextures(textures, timePerFrame: 0.1)
-        helicopter.runAction(
+        let anima = SKAction.animate(with: textures, timePerFrame: 0.1)
+        helicopter.run(
             SKAction.group([
-                SKAction.repeatActionForever(anima),
-                SKAction.speedTo(2.5, duration: 0)
+                SKAction.repeatForever(anima),
+                SKAction.speed(to: 2.5, duration: 0)
             ]), withKey:"animation"
         )
         
@@ -341,8 +341,8 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         light.position = CGPoint(x: 50.0, y: 0)
         light.categoryBitMask = 1
         light.falloff = 2
-        light.ambientColor = UIColor.blackColor()
-        light.lightColor = UIColor.whiteColor()
+        light.ambientColor = UIColor.black
+        light.lightColor = UIColor.white
         light.xScale = 20
         light.name = "light"
         helicopter.addChild(light)
